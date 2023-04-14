@@ -1,0 +1,31 @@
+.search-results {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .search-result {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .search-result img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .search-result h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+  }
+  
+  .search-result p {
+    margin: 0;
+    font-size: 1rem;
+    color: #666;
+  }
+  

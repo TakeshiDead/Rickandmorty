@@ -6,8 +6,8 @@ import './App.js'
 
 
  
-const SearchResults = ({ results }) => {
-  try  {
+const SearchResults = ({ results, error}) => {
+  if(results && results.length) {
   return (
     <div className="search-results">
       
@@ -24,13 +24,15 @@ const SearchResults = ({ results }) => {
     </div>
   );
 }
-catch(e){
+if(error){
   return <div>
     <div className='container_404 container_gif'><img src="https://media.tenor.com/AtKPpo2MXFEAAAAd/dog-burning.gif" alt="Rick And Morty, HD Png Download@kindpng.com" style={{display: 'flex', justifyContent: 'center', alignItems: 'center' }}></img></div>
   <div> <h1 className='container_404'>404</h1></div>
   <div className='container_404'><h2>characters not founds.</h2></div></div>
-
-
-};}
+}
+return<div>
+  <p>Write to start searching</p>
+</div>
+};
 
 export default SearchResults;

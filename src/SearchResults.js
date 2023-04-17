@@ -1,17 +1,16 @@
 import React from 'react';
 import './SearchResults.css';
-import './SkeletonResults'
-import SkeletonResults from './SkeletonResults';
-import './App.js'
+import './SkeletonResults';
+import './App.js';
 
 
- 
+
 const SearchResults = ({ results, error}) => {
   if(results && results.length) {
   return (
     <div className="search-results">
       
-      <SkeletonResults/>
+      
       {results.map(result => (
         <div key={result.id} className="search-result">
           <img src={result.image} alt={result.name} />
@@ -31,7 +30,7 @@ if(error){
   <div className='container_404'><h2>characters not founds.</h2></div></div>
 }
 return<div>
-  <p>Write to start searching</p>
+  <p>Write in the searchbar to start searching</p>
 </div>
 };
 

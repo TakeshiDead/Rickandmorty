@@ -1,16 +1,23 @@
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
+import './SearchResults.css';
 
-const SkeletonResults = () =>{
-    <div className='search-results'>
-    <div  className="search-result">
-        
-        <h3><Skeleton/></h3>
-        <p><Skeleton/></p>
-        <p><Skeleton/></p>
-        <p><Skeleton/></p>
+
+const SkeletonResults = ({cards}) => {
+  return (
+   
+    Array(cards).fill(0).map((_, i) => 
+    
+      <div className='search-results'key={i} >
+        <div className="search-result">
+          <Skeleton square width={206.67} height={206.67} />
+          <h3><Skeleton /></h3>
+          <p><Skeleton count={3} /></p>
+
+
+        </div>
       </div>
-      </div>
+   ))
 }
 
 export default SkeletonResults

@@ -74,7 +74,7 @@ const App = () => {
         </div >
 
         {!isLoading && <SearchResults results={results} error={hasError} />}
-        {isLoading && <SkeletonResults />}
+        {isLoading && <SkeletonResults cards={20} />}
       </div >
     </SkeletonTheme>
   );
